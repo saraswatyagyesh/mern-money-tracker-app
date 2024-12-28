@@ -53,20 +53,37 @@ from button{
   background-color: #ffffff;
 }
 
-div.transaction{
-  margin-top: 5px;
+div.transactions{
+  margin-top: 20px;
 }
 
 div.transaction{
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
+  border-bottom: 1px solid #30313d;
+} 
+div.transaction:first-child{
+  border-top:0;
 }
 
 div.transaction div.name{
   font-size: 1rem;
 }
 div.transaction div.description{
+  font-size: 0.7rem;
+  color: #888;
+}
+div.right{
+  text-align: right;
+}
+div.price.green{
+  color: #0f0;
+}
+div.price.red{
+  color: #f00;
+}
+div.transaction div.datetime{
   font-size: 0.7rem;
   color: #888;
 }

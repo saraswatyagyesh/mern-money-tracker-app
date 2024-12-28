@@ -21,7 +21,7 @@ function App() {
             <button type="submit">Add new transaction</button>
           </form>
 
-      <div className="Transactions">
+      <div className="transactions">
 
         <div className="transaction">
           <div className="left">
@@ -30,7 +30,7 @@ function App() {
           
           </div>
           <div className="right">
-            <div className="price">$500</div>
+            <div className="price red">-$500</div>
             <div className="datetime">2024-12-27 13:31</div>
           </div>
         </div>
@@ -38,11 +38,11 @@ function App() {
         <div className="transaction">
           <div className="left">
             <div className="name">New Samsung</div>
-            <div className="Description">It was time for new TV</div>
+            <div className="Description">Someone ordered this TV</div>
           
           </div>
           <div className="right">
-            <div className="price">$500</div>
+            <div className="price green">+$400</div>
             <div className="datetime">2024-12-27 13:31</div>
           </div>
         </div>
@@ -50,11 +50,11 @@ function App() {
         <div className="transaction">
           <div className="left">
             <div className="name">New Samsung</div>
-            <div className="Description">It was time for new TV</div>
+            <div className="Description">Gig job for the website</div>
           
           </div>
           <div className="right">
-            <div className="price">$500</div>
+            <div className="price red">-$900</div>
             <div className="datetime">2024-12-27 13:31</div>
           </div>
         </div>
