@@ -1,33 +1,42 @@
-
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [name, setName] = useState('');
+  const [description, setDescription] = useState('');
+  const [datetime, setDatetime] = useState('');
+
   return (
-
-
-      <main>
-        <h1>$400<span>.00</span></h1>
+    <main>
+      <h1>$400<span>.00</span></h1>
+      
+      <form>
+        <div className="basic">
+          <input type="text" 
+            value={name}
+            onChange={ev => setName(ev.target.value)}
+            placeholder={'+200 new samsung TV'} />
+          
+          <input value={datetime}
+            onChange={ev => setDatetime(ev.target.value)}
+            type="datetime-local" />
+        </div>
         
-        <form>
-            <div className="basic">
-              <input type="text" placeholder={'+200 new samsung TV'}></input>
-              <input type="datetime-local"></input>
-            </div>
-            
-            <div className="description">
-              <input type="text" placeholder={'description'}></input>
-            </div>
+        <div className="description">
+          <input type="text" 
+            value={description}
+            onChange={ev => setDescription(ev.target.value)}
+            placeholder={'description'} />
+        </div>
 
-            <button type="submit">Add new transaction</button>
-          </form>
+        <button type="submit">Add new transaction</button>
+      </form>
 
       <div className="transactions">
-
         <div className="transaction">
           <div className="left">
             <div className="name">New Samsung</div>
-            <div className="Description">It was time for new TV</div>
-          
+            <div className="description">It was time for new TV</div>
           </div>
           <div className="right">
             <div className="price red">-$500</div>
@@ -38,8 +47,7 @@ function App() {
         <div className="transaction">
           <div className="left">
             <div className="name">New Samsung</div>
-            <div className="Description">Someone ordered this TV</div>
-          
+            <div className="description">Someone ordered this TV</div>
           </div>
           <div className="right">
             <div className="price green">+$400</div>
@@ -50,19 +58,16 @@ function App() {
         <div className="transaction">
           <div className="left">
             <div className="name">New Samsung</div>
-            <div className="Description">Gig job for the website</div>
-          
+            <div className="description">Gig job for the website</div>
           </div>
           <div className="right">
             <div className="price red">-$900</div>
             <div className="datetime">2024-12-27 13:31</div>
           </div>
         </div>
-
       </div>
-      
-      </main>
-    );
+    </main>
+  );
 }
 
 export default App;
