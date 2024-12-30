@@ -6,11 +6,15 @@ const App = () => {
   const [description, setDescription] = useState('');
   const [datetime, setDatetime] = useState('');
 
+  function addNewTransaction(){
+    // Add logic to handle new transaction
+  }
+
   return (
     <main>
       <h1>$400<span>.00</span></h1>
       
-      <form>
+      <form onSubmit={addNewTransaction}>
         <div className="basic">
           <input type="text" 
             value={name}
