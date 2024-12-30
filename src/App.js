@@ -6,8 +6,21 @@ const App = () => {
   const [description, setDescription] = useState('');
   const [datetime, setDatetime] = useState('');
 
-  function addNewTransaction(){
-    // Add logic to handle new transaction
+  function addNewTransaction(ev) {
+    ev.preventDefault(); // to prevent the page from refreshing 
+    const url = process.env.REACT_APP_API_URL;
+    console.log(url);
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        description,
+        datetime
+      })
+    }).then(res => res.json().then(json => console.log('result', json)));
   }
 
   return (
